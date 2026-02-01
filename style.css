@@ -1,0 +1,896 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Advent+Pro:wght@100..900&family=Alfa+Slab+One&family=Andada+Pro:wght@400..844&family=Bahianita&family=Barriecito&family=Bitter:wght@100..900&family=Bodoni+Moda:wght@400..900&family=Changa+One&family=Dancing+Script:wght@400..700&family=Prata&family=Vast+Shadow&family=Yeseva+One&family=Permanent+Marker&family=Plus+Jakarta+Sans:wght@200..800&family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=Shadows+Into+Light&family=Permanent+Marker&family=Covered+By+Your+Grace&family=Rock+Salt&family=Architects+Daughter&family=Caveat:wght@700&family=Gochi+Hand&family=Coming+Soon&family=Patrick+Hand&family=Amatic+SC:wght@700&family=Handlee&display=swap');
+
+:root {
+    --color-bg: #f4f1ea;
+    --color-primary: #10419b;
+    --font-hand: 'Dancing Script', cursive;
+    --font-script: 'Permanent Marker', cursive;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-bg);
+    background-image: url('paper_bg.png');
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: var(--font-body);
+    overflow-x: hidden;
+    color: #1a1a1a;
+}
+
+.invitation-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 12px;
+    position: relative;
+}
+
+.collage-card {
+    background: transparent;
+    width: 100%;
+    max-width: 520px;
+    padding: 45px 12px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* BASE DECORATION STYLES */
+.deco {
+    position: absolute;
+    mix-blend-mode: multiply;
+    filter: contrast(1.18) brightness(1.08);
+    pointer-events: none;
+    z-index: 100;
+}
+
+/* CINEMA & PHOTOGRAPHY ELEMENTS - Top & Left Side */
+.deco-vinyl {
+    width: 145px;
+    top: -45px;
+    left: 8%;
+    transform: rotate(-8deg);
+    mix-blend-mode: normal;
+}
+
+.deco-leica {
+    width: 165px;
+    top: 12%;
+    left: -65px;
+    transform: rotate(-12deg);
+}
+
+.deco-sony {
+    width: 120px;
+    top: 58%;
+    left: -48px;
+    transform: rotate(18deg);
+}
+
+.deco-camera-blue {
+    width: 135px;
+    bottom: 22%;
+    left: 5%;
+    transform: rotate(-10deg);
+}
+
+.deco-camera-original {
+    width: 130px;
+    top: 38%;
+    left: -55px;
+    transform: rotate(-20deg);
+}
+
+/* POLITICAL SCIENCE ELEMENTS - Right Side & Strategic */
+.deco-marx {
+    width: 125px;
+    top: 8%;
+    right: 3%;
+    transform: rotate(5deg);
+    mix-blend-mode: normal;
+    filter: contrast(1.1) brightness(0.98);
+}
+
+.deco-lenin {
+    width: 115px;
+    top: 45%;
+    right: -42px;
+    transform: rotate(-8deg);
+    mix-blend-mode: normal;
+}
+
+.deco-books {
+    width: 135px;
+    bottom: 18%;
+    right: 6%;
+    transform: rotate(-8deg);
+    mix-blend-mode: normal;
+}
+
+.deco-globe {
+    width: 115px;
+    bottom: 42%;
+    left: -38px;
+    transform: rotate(12deg);
+    mix-blend-mode: normal;
+}
+
+.deco-gavel {
+    width: 110px;
+    top: 68%;
+    right: -32px;
+    transform: rotate(-10deg);
+    mix-blend-mode: normal;
+}
+
+/* POP CULTURE & FUN ELEMENTS - Scattered */
+.deco-snoopy {
+    width: 100px;
+    top: 25%;
+    left: 12%;
+    transform: rotate(8deg);
+}
+
+.deco-space-cat {
+    width: 110px;
+    bottom: 8%;
+    right: 18%;
+    transform: rotate(-12deg);
+    mix-blend-mode: normal;
+}
+
+.deco-cat-gesture {
+    width: 85px;
+    top: 18%;
+    right: 22%;
+    transform: rotate(15deg);
+}
+
+/* PARTY & CELEBRATION - Sparkle & Shine */
+.deco-disco-top {
+    width: 145px;
+    top: -32px;
+    right: -52px;
+    transform: rotate(-10deg);
+}
+
+.deco-disco-silver {
+    width: 125px;
+    bottom: 12%;
+    left: -45px;
+    transform: rotate(12deg);
+    mix-blend-mode: normal;
+}
+
+.deco-martini-glass {
+    width: 115px;
+    top: 32%;
+    right: 8%;
+    transform: rotate(10deg);
+    mix-blend-mode: normal;
+}
+
+.deco-martini {
+    width: 135px;
+    bottom: 45px;
+    right: -35px;
+    transform: rotate(-15deg);
+}
+
+.deco-dog {
+    width: 130px;
+    bottom: -15px;
+    left: -48px;
+    transform: rotate(10deg);
+}
+
+/* DECORATIVE ELEMENTS */
+.deco-flowers {
+    width: 275px;
+    top: -68px;
+    right: -68px;
+    mix-blend-mode: normal;
+}
+
+.deco-ribbon {
+    width: 110px;
+    bottom: 115px;
+    right: -22px;
+    transform: rotate(10deg);
+}
+
+.deco-grad-cap {
+    width: 105px;
+    bottom: 5%;
+    left: 15%;
+    transform: rotate(-18deg);
+}
+
+.deco-pushpin {
+    width: 55px;
+    top: 15%;
+    left: 28%;
+    transform: rotate(25deg);
+}
+
+/* NEW CINEMA & MUSIC ELEMENTS - Strategic Fill-ins */
+.deco-music-collage {
+    width: 165px;
+    top: 5%;
+    left: -62px;
+    transform: rotate(-5deg);
+    mix-blend-mode: normal;
+    filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.15));
+}
+
+.deco-lightning {
+    width: 95px;
+    top: 35%;
+    right: 18%;
+    transform: rotate(-25deg);
+    opacity: 0.92;
+    mix-blend-mode: normal;
+}
+
+.deco-clapperboard {
+    width: 145px;
+    bottom: 35%;
+    right: -58px;
+    transform: rotate(8deg);
+    mix-blend-mode: normal;
+    filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.15));
+}
+
+.deco-hand-camera {
+    width: 135px;
+    top: 52%;
+    left: -52px;
+    transform: rotate(-15deg);
+    mix-blend-mode: normal;
+    filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.15));
+}
+
+.deco-tickets {
+    width: 125px;
+    bottom: 12%;
+    right: 22%;
+    transform: rotate(12deg);
+    mix-blend-mode: normal;
+}
+
+.deco-oscar {
+    width: 105px;
+    bottom: 5%;
+    right: -42px;
+    transform: rotate(-10deg);
+    mix-blend-mode: normal;
+    filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.2));
+}
+
+/* NEW PHILOSOPHERS & CULTURE */
+.deco-snoopy-reading {
+    width: 110px;
+    bottom: 18%;
+    left: -45px;
+    transform: rotate(8deg);
+    mix-blend-mode: normal;
+    filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.15));
+}
+
+.deco-freud {
+    width: 130px;
+    top: 18%;
+    right: -48px;
+    transform: rotate(-12deg);
+    mix-blend-mode: normal;
+    filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.15));
+}
+
+.deco-sartre {
+    width: 100px;
+    bottom: 42%;
+    left: -38px;
+    transform: rotate(15deg);
+    mix-blend-mode: normal;
+    filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.15));
+}
+
+/* GLITTER STARS - Strategic Placement */
+.deco-star-1 {
+    width: 85px;
+    top: 20%;
+    left: 18%;
+    transform: rotate(-15deg);
+    opacity: 0.9;
+    mix-blend-mode: normal;
+}
+
+.deco-star-2 {
+    width: 75px;
+    top: 28%;
+    right: 12%;
+    transform: rotate(22deg);
+    opacity: 0.85;
+    mix-blend-mode: normal;
+}
+
+.deco-star-3 {
+    width: 70px;
+    bottom: 28%;
+    right: 15%;
+    transform: rotate(-18deg);
+    opacity: 0.9;
+    mix-blend-mode: normal;
+}
+
+.deco-star-4 {
+    width: 80px;
+    bottom: 35%;
+    left: 10%;
+    transform: rotate(12deg);
+    opacity: 0.88;
+    mix-blend-mode: normal;
+}
+
+/* Top Message */
+.top-message {
+    margin-bottom: 15px;
+    z-index: 10;
+    position: relative;
+}
+
+.handwritten {
+    font-family: var(--font-hand);
+    font-size: 2.7rem;
+    font-weight: 700;
+    line-height: 1.05;
+    margin-bottom: 6px;
+}
+
+.handwritten.sub {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 600;
+    max-width: 335px;
+    color: #2a2a2a;
+    line-height: 1.25;
+}
+
+/* Photo - Prominent */
+.photo-frame {
+    width: 100%;
+    max-width: 410px;
+    position: relative;
+    margin: 22px 0 18px;
+    z-index: 5;
+}
+
+.main-photo {
+    width: 100%;
+    display: block;
+    border: 8px solid white;
+    box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+/* Handwritten "it's me" annotation */
+.its-me-annotation {
+    position: absolute;
+    top: -45px;
+    right: -55px;
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.6rem;
+    color: #1a1a1a;
+    font-weight: 700;
+    transform: rotate(-8deg);
+    z-index: 15;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+.its-me-annotation::after {
+    content: '↓';
+    position: absolute;
+    left: 55%;
+    bottom: -25px;
+    transform: translateX(-50%) rotate(15deg);
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+/* Cap Letters */
+.cap-letters {
+    position: absolute;
+    top: 48px;
+    left: 46%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1px;
+    z-index: 10;
+}
+
+.cap-letter {
+    width: 41px;
+    mix-blend-mode: multiply;
+    filter: contrast(1.16) brightness(1.06);
+}
+
+.cap-k {
+    transform: rotate(-6deg);
+}
+
+.cap-c {
+    transform: rotate(6deg);
+}
+
+/* Graduation Title - ENHANCED Chrome/3D */
+.graduation-title {
+    margin: 12px 0 22px;
+}
+
+.balloon-letters,
+.ransom-note {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1px;
+    margin: 2px 0;
+}
+
+.letter,
+.ransom {
+    display: inline-block;
+    margin: 2px;
+    font-weight: 900;
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2), 2px 2px 8px rgba(0, 0, 0, 0.1);
+    transform: rotate(var(--r, 0deg)) translateY(var(--y, 0px));
+    line-height: 0.9;
+}
+
+/* "Graduation" - STRONGER Chrome/metallic effect with SIZE VARIATION */
+.letter {
+    background: linear-gradient(155deg, #f0f0f0 0%, #ffffff 25%, #e0e0e0 50%, #c8c8c8 75%, #b0b0b0 100%);
+    color: #2a2a2a;
+    text-shadow:
+        1px 1px 0 #fff,
+        -1px -1px 0 #999,
+        2px 2px 3px rgba(0, 0, 0, 0.4),
+        -1px -1px 1px rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Dramatic size variation for letters */
+.letter {
+    font-size: 2.8rem;
+    padding: 10px 16px;
+}
+
+.letter.large {
+    font-size: 3.2rem;
+    padding: 12px 18px;
+}
+
+.letter.small {
+    font-size: 2.4rem;
+    padding: 8px 14px;
+}
+
+/* Individual fonts */
+.f1 {
+    font-family: 'Abril Fatface', serif;
+}
+
+.f2 {
+    font-family: 'Bahianita', cursive;
+}
+
+.f3 {
+    font-family: 'Barriecito', cursive;
+}
+
+.f4 {
+    font-family: 'Alfa Slab One', cursive;
+}
+
+.f5 {
+    font-family: 'Vast Shadow', cursive;
+}
+
+.f6 {
+    font-family: 'Yeseva One', serif;
+}
+
+.f7 {
+    font-family: 'Prata', serif;
+}
+
+.f8 {
+    font-family: 'Bodoni Moda', serif;
+    font-style: italic;
+}
+
+.f9 {
+    font-family: 'Changa One', cursive;
+}
+
+.f10 {
+    font-family: 'Bitter', serif;
+}
+
+.f11 {
+    font-family: 'Advent Pro', sans-serif;
+    font-weight: 800;
+}
+
+.f12 {
+    font-family: 'Andada Pro', serif;
+}
+
+/* "CEREMONY" - Strong ransom style */
+.ransom {
+    font-size: 2.6rem;
+    padding: 10px 15px;
+}
+
+.ransom:not(.white) {
+    background: #000;
+    color: #fff;
+}
+
+.ransom.white {
+    background: #fff;
+    color: #000;
+    border: 2px solid #000;
+}
+
+.letter:nth-child(odd) {
+    --r: -5deg;
+    --y: 4px;
+}
+
+.letter:nth-child(even) {
+    --r: 5deg;
+    --y: -4px;
+}
+
+/* Countdown Timer */
+.countdown-section {
+    margin: 25px 0;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.6);
+    border: 3px dashed var(--color-primary);
+    border-radius: 8px;
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.countdown-label {
+    font-family: var(--font-hand);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 15px;
+}
+
+.countdown-timer {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 70px;
+}
+
+.countdown-value {
+    font-family: var(--font-script);
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #fff;
+    background: var(--color-primary);
+    padding: 12px 16px;
+    border-radius: 6px;
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+    min-width: 60px;
+    text-align: center;
+    transform: rotate(-2deg);
+    line-height: 1;
+}
+
+.countdown-item:nth-child(even) .countdown-value {
+    transform: rotate(2deg);
+    background: #1a5cc4;
+}
+
+.countdown-unit {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #555;
+    margin-top: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Event Info - Tighter spacing */
+.event-info {
+    margin: 20px 0;
+}
+
+.date {
+    font-size: 2.1rem;
+    font-weight: 800;
+}
+
+.time {
+    font-size: 4rem;
+    font-weight: 950;
+    color: var(--color-primary);
+    margin: 6px 0;
+    line-height: 0.95;
+}
+
+.location {
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.arrival {
+    font-size: 0.93rem;
+    color: #555;
+    margin-top: 4px;
+}
+
+/* Invite Name */
+.invite-name {
+    margin: 28px 0;
+}
+
+.invite-line {
+    font-family: var(--font-hand);
+    font-size: 2.1rem;
+}
+
+.guest-name {
+    font-family: var(--font-script);
+    font-size: 2.3rem;
+    border-bottom: 3px solid #000;
+    padding: 0 28px;
+    margin-left: 12px;
+    display: inline-block;
+}
+
+/* Dresscode */
+.dresscode {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 32px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.dots {
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+}
+
+.dot.white {
+    background: #fff;
+}
+
+.dot.blue {
+    background: #0e30a5;
+}
+
+.dot.black {
+    background: #000;
+}
+
+/* Buttons */
+.rsvp-section {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn-ticket {
+    background: #fff;
+    border: 2px solid #000;
+    padding: 11px 20px;
+    font-family: var(--font-script);
+    font-size: 1.05rem;
+    cursor: pointer;
+    box-shadow: 5px 5px 0 #000;
+    transition: 0.2s;
+}
+
+.btn-ticket:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 7px 7px 0 #000;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 400px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile */
+@media (max-width: 800px) {
+    .collage-card {
+        padding: 32px 8px;
+    }
+
+    /* Hide most decorations on mobile, keep key ones */
+    .deco {
+        display: none;
+    }
+
+    /* Keep essential elements visible */
+    .deco-disco-top {
+        display: block;
+        width: 95px;
+        top: -22px;
+        right: -35px;
+    }
+
+    .deco-flowers {
+        display: block;
+        width: 135px;
+        top: -42px;
+        right: -42px;
+    }
+
+    .deco-marx {
+        display: block;
+        width: 85px;
+        top: 75px;
+        right: -28px;
+    }
+
+    .deco-vinyl {
+        display: block;
+        width: 90px;
+        top: -35px;
+        left: -30px;
+    }
+
+    .deco-grad-cap {
+        display: block;
+        width: 75px;
+        bottom: 140px;
+        left: -25px;
+    }
+
+    .deco-star-1 {
+        display: block;
+        width: 55px;
+    }
+
+    .deco-star-3 {
+        display: block;
+        width: 50px;
+    }
+
+    /* Show select new cinema elements on mobile */
+    .deco-clapperboard {
+        display: block;
+        width: 95px;
+        bottom: 30%;
+        right: -40px;
+    }
+
+    .deco-lightning {
+        display: block;
+        width: 65px;
+        top: 32%;
+        right: 15%;
+    }
+
+    .deco-tickets {
+        display: block;
+        width: 85px;
+        bottom: 15%;
+        right: 18%;
+    }
+
+    .photo-frame {
+        width: 290px;
+    }
+
+    .handwritten {
+        font-size: 2.1rem;
+    }
+
+    .handwritten.sub {
+        font-size: 0.92rem;
+    }
+
+    .letter {
+        font-size: 1.8rem !important;
+        padding: 6px 11px !important;
+    }
+
+    .ransom {
+        font-size: 1.7rem !important;
+        padding: 6px 11px !important;
+    }
+
+    .time {
+        font-size: 3.2rem;
+    }
+
+    .invite-line {
+        font-size: 1.7rem;
+    }
+
+    .guest-name {
+        font-size: 1.9rem;
+    }
+
+    /* Countdown on mobile */
+    .countdown-section {
+        padding: 15px;
+        margin: 20px 0;
+    }
+
+    .countdown-label {
+        font-size: 1.5rem;
+    }
+
+    .countdown-timer {
+        gap: 8px;
+    }
+
+    .countdown-value {
+        font-size: 2rem;
+        padding: 10px 12px;
+        min-width: 50px;
+    }
+
+    .countdown-unit {
+        font-size: 0.75rem;
+    }
+}

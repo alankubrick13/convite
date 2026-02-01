@@ -1,0 +1,20 @@
+/* Handwritten "it's me" annotation */
+.its-me-annotation {
+    position: absolute;
+    top: -35px;
+    right: -45px;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.4rem;
+    color: #1a1a1a;
+    transform: rotate(-8deg);
+    z-index: 15;
+}
+
+.its-me-annotation::after {
+    content: '↓';
+    position: absolute;
+    left: 50%;
+    bottom: -20px;
+    transform: translateX(-50%) rotate(15deg);
+    font-size: 2rem;
+}
