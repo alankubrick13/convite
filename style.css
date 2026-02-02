@@ -763,77 +763,103 @@ body {
         padding: 32px 8px;
     }
 
+    /* Ensure text content has higher z-index than decorations on mobile */
+    .top-message,
+    .graduation-title,
+    .countdown-section,
+    .event-info,
+    .invite-name,
+    .rsvp-section {
+        position: relative;
+        z-index: 200;
+        background: rgba(244, 241, 234, 0.85);
+        padding: 12px;
+        border-radius: 8px;
+        backdrop-filter: blur(2px);
+    }
+
+    .photo-frame {
+        position: relative;
+        z-index: 150;
+    }
+
     /* Hide most decorations on mobile, keep key ones */
     .deco {
         display: none;
+        z-index: 1 !important;
+        /* Ensure decorations are always behind content */
     }
 
-    /* Keep essential elements visible */
+    /* Keep essential elements visible but repositioned to avoid overlap */
     .deco-disco-top {
         display: block;
-        width: 95px;
-        top: -22px;
-        right: -35px;
+        width: 75px;
+        top: -15px;
+        right: -25px;
     }
 
     .deco-flowers {
         display: block;
-        width: 135px;
-        top: -42px;
-        right: -42px;
+        width: 100px;
+        top: -30px;
+        right: -30px;
     }
 
     .deco-marx {
         display: block;
-        width: 85px;
-        top: 75px;
-        right: -28px;
+        width: 70px;
+        top: 60px;
+        right: -20px;
     }
 
     .deco-vinyl {
         display: block;
-        width: 90px;
-        top: -35px;
-        left: -30px;
+        width: 75px;
+        top: -25px;
+        left: -25px;
     }
 
     .deco-grad-cap {
         display: block;
-        width: 75px;
-        bottom: 140px;
-        left: -25px;
+        width: 60px;
+        bottom: 120px;
+        left: -20px;
     }
 
     .deco-star-1 {
         display: block;
-        width: 55px;
+        width: 45px;
+        top: 15%;
+        left: 5%;
     }
 
     .deco-star-3 {
         display: block;
-        width: 50px;
+        width: 40px;
+        bottom: 20%;
+        right: 5%;
     }
 
-    /* Show select new cinema elements on mobile */
+    /* Show select new cinema elements on mobile - repositioned */
     .deco-clapperboard {
         display: block;
-        width: 95px;
-        bottom: 30%;
-        right: -40px;
+        width: 80px;
+        bottom: 25%;
+        right: -30px;
     }
 
     .deco-lightning {
         display: block;
-        width: 65px;
-        top: 32%;
-        right: 15%;
+        width: 55px;
+        top: 28%;
+        right: 10%;
     }
 
     .deco-tickets {
         display: block;
-        width: 85px;
-        bottom: 15%;
-        right: 18%;
+        width: 70px;
+        bottom: 12%;
+        right: 15%;
     }
 
     .photo-frame {
